@@ -37,7 +37,6 @@ https://drive.google.com/drive/folders/1OZ-Ox2pSohRdgRKoFJdmtw__OaccaSkj?usp=sha
     Execute Site2Vec/gitHub/Site2VecWebService/upload.py
     
     Open a browser and paste http://127.0.0.1:5616/home. (It is executed in the local system. Web service will be hosted very soon)
-    ![myimage-alt-tag](http://lmsotfy.com/so.png)
     
   **4. Train Model**
   
