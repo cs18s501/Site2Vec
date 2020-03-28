@@ -1,7 +1,7 @@
 # Site2Vec
 ### Site2vec, a novel machine learning-based method for reference frame invariant ligand-independent vector embedding of the 3D structure of a protein-ligand binding site. Each binding site is represented as a 200-dimensional vector form.
 
-**1. Download Model From link given below:**
+**1. Download Model From the link given below:**
 https://drive.google.com/drive/folders/1OZ-Ox2pSohRdgRKoFJdmtw__OaccaSkj?usp=sharing
 
     1.1) Create a folder "**Model**" in directory /Site2Vec/gitHub/Site2VecWebService/ and save AutoEncoder.h5, Cluster.sav into it. 
@@ -36,10 +36,12 @@ https://drive.google.com/drive/folders/1OZ-Ox2pSohRdgRKoFJdmtw__OaccaSkj?usp=sha
 
     Execute Site2Vec/gitHub/Site2VecWebService/upload.py
     
-    Open a browser and paste http://127.0.0.1:5616/home. (It is executed in local. Web service will be hosted later)
+    Open a browser and paste http://127.0.0.1:5616/home. (It is executed in the local system. Web service will be hosted very soon)
+    ![Screenshot](Screenshot_2020-03-28_16-05-52.png)
     
   **4. Train Model**
-    To train your own model run **Site2Vec** notebook. provide binding site folder path.
+  
+    To train your model, run **Site2Vec** notebook and provide binding site folder path.
   
 
 
