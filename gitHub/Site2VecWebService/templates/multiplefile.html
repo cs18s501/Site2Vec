@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Site2Vec</title>
+  		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	{% include "header.html" %}
+	<div class="container mt-3">
+
+
+	
+	<h3>Vector Encoding of Binding Site</h3><br>
+	<div>
+		<p>Site2vec, a novel machine learning-based method for reference frame invariant ligand-independent vector embedding of the 3D structure of a protein-ligand binding site. Each binding site is represented as a 200-dimensional vector form.</p>
+		<p>Upload one or more than one pdb files and our method provides a zip file containg the vector representation of binding sites.</p>
+
+
+		<form action="/home">
+		    	<button type="submit" class="btn btn-info">Back To Home</button>
+		   </form>
+		   <br>
+		
+
+		{% with messages = get_flashed_messages() %}
+	   		{% if messages %}
+	      		{% for message in messages %}
+
+		      			<div class="alert alert-warning" role="alert">
+							
+		         			<strong>Warning </strong>{{  message }}
+		         		</div>
+
+	      		{% endfor %}
+	   		{% endif %}
+		{% endwith %}
+
+
+	</div>
+	
+		<p><b>Ex. 1f9a.pdb, 1dhi.pdb</b></p>
+		<form action = "/multiplesucess" method = "post" enctype="multipart/form-data">  
+	    
+
+	    <div class="custom-file mb-3">
+	    	
+	    	<input type="file" name="file" class="custom-file-input" multiple="multiple" required/> 
+	    	
+	    	<label for="file" class="custom-file-label">Upload one or more PBD files</label>
+	    </div>    
+	    	 
+	        <input type = "submit" value="Upload" class="btn btn-primary">  
+	    </form><br>
+
+	    
+	
+
+	    <p><b> Upload a Directory containg pdb Files</b></p>
+		<form action = "/multiplesucess" method = "post" enctype="multipart/form-data">  
+		    
+
+		    <div class="custom-file mb-3">
+		    	
+		    	<input type="file" name="file" class="custom-file-input" webkitdirectory mozdirectory required/> 
+		    	
+		    	<label for="file" class="custom-file-label">Upload a directory</label>
+		    </div>    
+		    	 
+		        <input type = "submit" value="Upload" class="btn btn-primary">  
+		    </form><br>
+
+	    
+	</div>
+
+
+
+
+
+
+	{% include "footer.html" %}
+
+</body>
+</html>

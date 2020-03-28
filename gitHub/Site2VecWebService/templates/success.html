@@ -1,0 +1,71 @@
+<html>  
+<head>  
+		<title>Site2Vec</title>  
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+</head>  
+<body>  
+
+
+	{% include "header.html" %} 
+
+	<div class="container mt-3">
+		<h3>Vector Encoding of Binding Site</h3><br>
+  			
+		<p>Site2vec, a novel machine learning-based method for reference frame invariant ligand-independent vector embedding of the 3D structure of a protein-ligand binding site. Each binding site is represented as a 200-dimensional vector form.</p>
+	
+	<form action="/download" method="POST">
+	
+		{% with messages = get_flashed_messages() %}
+	   		{% if messages %}
+	      		{% for message in messages %}
+
+		      			<div class="alert alert-warning" role="alert">
+							
+		         			<strong>Warning </strong>{{  message }}
+		         		</div>
+
+	      		{% endfor %}
+	   		{% endif %}
+		{% endwith %}		
+		
+		<div class="alert alert-success">
+  			<strong>Success!</strong> Binding Site Vector Embeeding Successful.
+		</div>
+
+		
+
+
+		<p>Check the boxes you want to donwload  and hit download button.</p>
+
+		<p>Each binding site is represented as as <strong>PDBID_LIGID_CHAINID_LIGNO.</strong></p>
+		<div class="container">
+			<div class="container">
+					<ol>
+						{% for file in name %}
+							<li> &nbsp; &nbsp; &nbsp; <input type="checkbox" class="form-check-input" name="download" value ={{ file }} checked>{{ file.split('+')[0][0:4]+'_'+file.split('+')[1][:-1]+"_"+file.split("+")[2][:-1]+"_"+file.split("+")[3][:-1]   }}</li>   
+						{%endfor%}
+		
+					</ol>
+				
+
+			</div><br>
+			<button type="submit" class="btn btn-success">Download</button>
+			<button type="submit" formaction="/home" class="btn btn-info">Back To Home</button>
+		</div>
+
+	</form>
+	</div><br>
+		<p> </p>
+
+
+		{% include "footer.html" %}
+
+</body>  
+</html>  

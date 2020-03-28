@@ -1,0 +1,59 @@
+<html>  
+<head>  
+		<title>Site2Vec</title>  
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+</head> 
+<body>
+
+	{% include "header.html" %}
+
+	<div class="container mt-3">
+		<h3>Relationship Diagram as Dendrogram</h3>
+		{% with messages = get_flashed_messages() %}
+	   		{% if messages %}
+	      		{% for message in messages %}
+
+		      			<div class="alert alert-warning" role="alert">
+							
+		         			<strong>Warning </strong>{{  message }}
+		         		</div>
+
+	      		{% endfor %}
+	   		{% endif %}
+		{% endwith %}
+
+
+
+		<div class="container">
+		
+			<form action="/downloadImage" method="POST">
+				{%if not flag%}
+					<p> No Diagram to Show</p><br>
+				{%endif%}
+				{%if flag%}
+					<p>Dendrogram diagram of uploaded sites</p>
+					<img style="float: none" src="{{url_for('static',filename='Dedrogram.png')}}">
+					<button type="submit" formaction="/downloadImage" class="btn btn-success">Download</button>
+				{% endif%}
+				<button type="submit" formaction="/home" class="btn btn-info">Back to Home</button>
+			</form>
+		</div>
+	</div>
+
+
+
+
+	<p>
+		
+	</p>
+	{% include "footer.html" %}
+
+</body>
+</html>
