@@ -5,9 +5,9 @@
 
 https://drive.google.com/drive/folders/1OZ-Ox2pSohRdgRKoFJdmtw__OaccaSkj?usp=sharing
 
-    1.1) Create a folder "**Model**" in directory /Site2Vec/gitHub/Site2VecWebService/ and save AutoEncoder.h5, Cluster.sav into it. 
+    1.1) Create a folder "Model" in directory /Site2Vec/gitHub/Site2VecWebService/ and save AutoEncoder.h5, Cluster.sav into it. 
   
-    1.2) Create a folder "**File**" in directory /Site2Vec/gitHub/Site2VecWebService/ and save file.pkl into it.
+    1.2) Create a folder "File" in directory /Site2Vec/gitHub/Site2VecWebService/ and save file.pkl into it.
 
 **2. Environment**
 
