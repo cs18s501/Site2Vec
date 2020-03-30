@@ -41,7 +41,7 @@ https://drive.google.com/drive/folders/1OZ-Ox2pSohRdgRKoFJdmtw__OaccaSkj?usp=sha
     
   **4. Train Model**
   
-    To train your model, run **Site2Vec** notebook and provide binding site folder path.
+    To train your model, run Site2Vec notebook and provide (edit) binding site folder path. Sample data is also provided.
   
 
 
