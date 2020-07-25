@@ -25,7 +25,7 @@ https://drive.google.com/drive/folders/1OZ-Ox2pSohRdgRKoFJdmtw__OaccaSkj?usp=sha
     
     2.7) scipy 1.4.1
     
-    2.8) tensorflow 2.1.0
+    2.8) tensorflow 1.12.0
     
     2.9) keras 2.3.1
     
