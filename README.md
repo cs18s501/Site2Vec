@@ -17,7 +17,7 @@ https://drive.google.com/drive/folders/1OZ-Ox2pSohRdgRKoFJdmtw__OaccaSkj?usp=sha
     
     2.3) pandas 1.0.3
     
-    2.4) pil 1.1.7
+    2.4) Pickle 1.1.7
     
     2.5) jdk 1.8.0_232
     
